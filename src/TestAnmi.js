@@ -1,8 +1,13 @@
-import './App.css';
+import React from 'react'
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+import Typist from 'react-typist';
+import Typical from 'react-typical';
 
-function App() {
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+
+
+const TestAnmi = () => {
+
+    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 const FadeUp = batch(Fade(), Move(), Sticky());
 const Spin = (cycle) =>
   ({
@@ -23,19 +28,22 @@ const Spin = (cycle) =>
       },
     },
   });
-
-  
-
   return (
     <ScrollContainer>
   <ScrollPage>
     <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-      <span style={{ fontSize: "30px" }}>Let me show you scroll animation 😀</span>
+      <span style={{ fontSize: "30px" }}>
+      <Typical
+        steps={['front-end developer', 1000, ]}
+        loop={Infinity}
+        wrapper="p"
+      />
+      </span>
     </Animator>
   </ScrollPage>
   <ScrollPage>
     <Animator animation={ZoomInScrollOut}>
-      <span style={{ fontSize: "40px" }}>I'm FadeUpScrollOut ✨</span>
+    afda;lkfjlhksdfhks  
     </Animator>
   </ScrollPage>
   <ScrollPage>
@@ -72,7 +80,7 @@ const Spin = (cycle) =>
     ...
   </ScrollPage>
 </ScrollContainer>
-  );
+  )
 }
 
-export default App;
+export default TestAnmi
